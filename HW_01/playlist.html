@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>**My Music Playlist**</title>
+    <link rel="stylesheet" href="playlist.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <h1>My Music Playlist</h1>
+    </header>
+
+    <main>
+        <hr class="divider" />
+
+        <div class="table-wrapper">
+            <table class="songs-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Song Name</th>
+                        <th>Year</th>
+                        <th>Image</th>
+                        <th>Video</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Alan Walker</td>
+                        <td>Faded</td>
+                        <td>2015</td>
+                        <td>
+                            <img src="https://img.youtube.com/vi/60ItHLz5WEA/hqdefault.jpg"
+                                alt="Alan Walker - Faded thumbnail" />
+                        </td>
+                        <td>
+                            <div class="video-container click-to-play" data-video-id="60ItHLz5WEA">
+                                <img class="video-thumb" src="https://img.youtube.com/vi/60ItHLz5WEA/maxresdefault.jpg"
+                                    alt="Alan Walker - Faded video thumbnail" />
+                                <div class="play-button"></div>
+                            </div>
+                            <iframe class="video-frame hidden" title="Alan Walker - Faded video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                            </iframe>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Deaf Kev</td>
+                        <td>Invincible</td>
+                        <td>2016</td>
+                        <td>
+                            <img src="https://img.youtube.com/vi/jRdgsDx0IP0/hqdefault.jpg"
+                                alt="Alok & Alan Walker - Headlights thumbnail" />
+                        </td>
+                        <td>
+                            <div class="video-container click-to-play" data-video-id="jRdgsDx0IP0">
+                                <img class="video-thumb" src="https://img.youtube.com/vi/jRdgsDx0IP0/maxresdefault.jpg"
+                                    alt="Alok & Alan Walker - Headlights video thumbnail" />
+                                <div class="play-button"></div>
+                            </div>
+                            <iframe class="video-frame hidden" title="Alok & Alan Walker - Headlights video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                            </iframe>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Firefl!es</td>
+                        <td>Dayspring</td>
+                        <td>2019</td>
+                        <td>
+                            <img src="https://img.youtube.com/vi/eoplw2Cc3xc/hqdefault.jpg"
+                                alt="Tobu - Hope thumbnail" />
+                        </td>
+                        <td>
+                            <div class="video-container click-to-play" data-video-id="eoplw2Cc3xc">
+                                <img class="video-thumb" src="https://img.youtube.com/vi/eoplw2Cc3xc/maxresdefault.jpg"
+                                    alt="Tobu - Hope video thumbnail" />
+                                <div class="play-button"></div>
+                            </div>
+                            <iframe class="video-frame hidden" title="Tobu - Hope video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                            </iframe>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <hr class="divider" />
+        <p class="footer-text">© 2025 My Music Playlist</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const videoPlaceholders = document.querySelectorAll('.click-to-play');
+
+            videoPlaceholders.forEach(placeholder => {
+                placeholder.addEventListener('click', () => {
+                    const videoId = placeholder.getAttribute('data-video-id');
+                    const iframe = placeholder.nextElementSibling;
+
+                    if (videoId && iframe && iframe.classList.contains('video-frame')) {
+                        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+                        placeholder.classList.add('hidden');
+                        iframe.classList.remove('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
