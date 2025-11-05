@@ -1,7 +1,6 @@
 :root {
     --blue: #0a66c2;
     --border: #e5e7eb;
-    --faint-line: #d1d5db;
     --text: #111827;
     --bg: #ffffff;
 }
@@ -65,7 +64,7 @@ body {
     padding: 0.75rem;
     border-bottom: 1px solid var(--border);
     vertical-align: middle;
-    text-align: left;
+    text-align: center;
 }
 
 .songs-table thead th {
@@ -119,27 +118,32 @@ body {
     display: none !important;
 }
 
-/* Play button overlay */
+/* YouTube-style Play Button */
 .play-button {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 64px;
-    height: 64px;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 50%;
+    width: 68px;
+    height: 48px;
+    background: #ff0000;
+    /* darker overlay */
+    border-radius: 12px;
     transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
 }
 
 .play-button::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 26px;
-    top: 20px;
+    top: 12px;
     border-style: solid;
-    border-width: 12px 0 12px 18px;
-    border-color: transparent transparent transparent var(--blue);
+    border-width: 12px 0 12px 20px;
+    border-color: transparent transparent transparent #fff;
+    /* white triangle */
 }
+
+
 
 /* Keep the embedded player centered & responsive */
 .video-frame {
