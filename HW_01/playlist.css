@@ -68,8 +68,6 @@ body {
 }
 
 .songs-table thead th {
-    background: var(--blue);
-    color: #fff;
     position: sticky;
     top: 0;
     z-index: 1;
@@ -101,6 +99,7 @@ body {
     transition: transform 0.2s ease-in-out;
 }
 
+/* Keep the embedded player centered & responsive */
 .video-frame {
     width: 100%;
     aspect-ratio: 16 / 9;
@@ -144,17 +143,6 @@ body {
 }
 
 
-
-/* Keep the embedded player centered & responsive */
-.video-frame {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    border: none;
-    border-radius: 6px;
-    display: block;
-    margin: 0 auto;
-}
-
 /* Image column: size + center */
 .songs-table td img {
     width: 100%;
@@ -179,4 +167,16 @@ body {
     .video-container {
         width: 100%;
     }
+}
+
+.blue-header {
+    background-color: #0a66c2;
+    color: white;
+}
+
+.highlight-row {
+    background-color: #d6eaff;
+    color: #003366;
+    font-weight: bold;
+    font-size: 1.1em;
 }
