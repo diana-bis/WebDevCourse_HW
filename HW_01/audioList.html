@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #111;
+            margin: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0a66c2;
+        }
+
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            background-color: #f2f2f2;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+            font-weight: bold;
+        }
+
+        img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        audio {
+            width: 200px;
+            border: 1px solid #4caf50;
+            border-radius: 6px;
+            padding: 2px;
+        }
+
+        a {
+            color: blue;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #0a66c2;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Music Table</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Cover</th>
+                <th>Title</th>
+                <th>Artist</th>
+                <th>Year</th>
+                <th>Play</th>
+                <th>Download</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="https://img.youtube.com/vi/NCtzkaL2t_Y/hqdefault.jpg" alt="The Beatles cover"></td>
+                <td>Don't Let Me Down</td>
+                <td>The Beatles</td>
+                <td>2015</td>
+                <td><audio controls>
+                        <source src="AudioFiles/The Beatles - Don't Let Me Down.mp3" type="audio/mpeg">
+                    </audio></td>
+                <td><a href="AudioFiles/The Beatles - Don't Let Me Down.mp3" download>Download</a></td>
+            </tr>
+            <tr>
+                <td><img src="https://img.youtube.com/vi/ZhIsAZO5gl0/hqdefault.jpg" alt="Kiss cover"></td>
+                <td>I Was Made For Lovin' You</td>
+                <td>Kiss</td>
+                <td>2019</td>
+                <td><audio controls>
+                        <source src="AudioFiles/Kiss - I Was Made For Lovin' You.mp3" type="audio/mpeg">
+                    </audio></td>
+                <td><a href="AudioFiles/Kiss - I Was Made For Lovin' You.mp3" download>Download</a></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
