@@ -24,7 +24,6 @@ body {
     color: var(--text);
     padding: 1.5rem 1rem;
     text-align: center;
-    border-bottom: 1px solid var(--faint-line);
 
 }
 
@@ -37,7 +36,6 @@ body {
 /* Divider */
 .divider {
     border: none;
-    border-top: 1px solid var(--faint-line);
     margin: 1.5rem auto;
     width: 90%;
 }
@@ -49,9 +47,8 @@ body {
     padding: 0 1rem;
     overflow-x: auto;
     background-color: #fff;
-    border: 1px solid var(--faint-line);
     border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.26)
 }
 
 .songs-table {
@@ -86,9 +83,7 @@ body {
     max-width: 360px;
     width: 100%;
     position: relative;
-    /* ADDED: For play-button positioning */
     cursor: pointer;
-    /* ADDED: Indicates clickability */
 }
 
 .video-thumb {
@@ -174,9 +169,30 @@ body {
     color: white;
 }
 
-.highlight-row {
+/* Step 14 of HW */
+/*.highlight-row {
     background-color: #d6eaff;
     color: #003366;
     font-weight: bold;
     font-size: 1.1em;
+}*/
+
+/* Step 15 of HW */
+/* song title link style */
+.song-link {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.song-link:hover,
+.song-link:focus {
+    color: var(--blue);
+    text-decoration: underline;
+}
+
+/* optional: visited color slightly muted */
+.song-link:visited {
+    color: #374151;
+    /* slate-ish; adjust as you like */
 }
