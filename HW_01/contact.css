@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background: rgba(60, 148, 189, 0.164);
+    color: #111;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Page title */
+h1 {
+    margin-top: 2rem;
+    color: #0a66c2;
+}
+
+table {
+    border: 1px solid #e5e7eb;
+    width: 350px;
+    margin: 2rem auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-collapse: collapse;
+}
+
+
+/* Header - Send a Message */
+th {
+    background-color: #0a66c28e;
+    color: white;
+    font-size: 1.2rem;
+    padding: 12px;
+}
+
+/* Table cells */
+td {
+    padding: 10px;
+    border: 1px solid #e5e7eb;
+}
+
+label {
+    font-weight: bold;
+    display: inline-block;
+    width: 90px;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 6px;
+    border: 1px solid #ccc;
+    transition: border-color 0.2s ease-in-out;
+}
+
+/* Highlight input on focus */
+input:focus,
+textarea:focus {
+    border-color: #0a66c2;
+    outline: none;
+}
+
+textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+/* Submit button */
+input[type="button"],
+input[type="submit"] {
+    background-color: #0a66c2c2;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+/* Button hover effect */
+input[type="button"]:hover,
+input[type="submit"]:hover {
+    background-color: #084b94;
+}
